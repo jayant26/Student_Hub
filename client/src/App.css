@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  top: 0;
+}
+
+.Homepage_container{
+  
+  display: flex;
+ justify-content: center;
+ 
+}
+
+.Homepage_main_container {
+   display: flex; 
+   
+  width: 90%;
+  height: 90vh;
+  
+    margin-top: 5vh; 
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+   /* box-shadow: 10px black; */
+ 
+
+}
+
+.Homepage_image_container {
+  width: 50%;
+  /* border: 1px solid green; */
+  border-radius: 10px 0px 0px 10px;
+  /* position:absolute; */
+}
+
+.Homepage_login_container {
+ display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+
+    padding: 20px;
+  /* border: 1px solid black; */
+  border-radius: 0px 10px 10px 0px;
+
+}
+
+.Homepage_image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 0px 0px 10px;
+  filter: blur(3px); /* Add this line to blur the image */
+}
+.logo{
+  width: 3rem;
+  /* border: 10px solid green; */
+}
+
+@font-face {
+  font-family: title;
+  src: url("./res/fonts/Museo_Slab_500italic.otf");
+}
+
+.title{
+  font-family: title;
+  margin-top: 10px;
+
+}
+.login_container{
+  /* margin-top: 20px; */
+  width: 55%;
+ /* border: 1px solid black; */
+ display: flex;
+ flex-direction: column;
+ align-items:center;
+ justify-content: space-evenly;
+ height: 40%; 
+}
+
+.login_container input {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #888;
+}
+
+.login_container input:focus {
+  outline: none;
+  /* border: 2px; */
+  border-color: #6d95d7;
+}
+input:focus::-webkit-input-placeholder { /* For webkit browsers */
+  color: transparent;
+}
+
+.login_container button{
+  width: 100%;
+  padding: 10px;
+  background-color:#3b71ca;
+  color: white;
+  border: none;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.registration_container{
+  display: flex;
+  flex-direction: column;
+  width: 53%;
+}
+.registration_menu{
+  width: 100%;
+ /* border: 1px solid black; */
+ display: flex;
+ align-items:center;
+ /* justify-content: center; */
+ /* height: 40%;  */
+}
+
+.backArrow{
+  padding: 5px 10px;
+  font-size: 25px;
+  cursor: pointer;
+  /* font-weight: 800; */
+ /* width: 10%; */
+ /* border: 1px solid red; */
+
+}
+
+.registration_menu button{
+  width: 48%;
+  padding: 5px 10px;
+  font-size: 28px;
+   background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
