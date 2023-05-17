@@ -3,24 +3,24 @@
   top: 0;
 }
 
-.Homepage_container{
-  
+.Homepage_container {
+
   display: flex;
- justify-content: center;
- 
+  justify-content: center;
+
 }
 
 .Homepage_main_container {
-   display: flex; 
-   
+  display: flex;
+
   width: 90%;
   height: 90vh;
-  
-    margin-top: 5vh; 
-    border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-   /* box-shadow: 10px black; */
- 
+
+  margin-top: 5vh;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 10px black; */
+
 
 }
 
@@ -32,13 +32,13 @@
 }
 
 .Homepage_login_container {
- display: flex;
+  display: flex;
   width: 50%;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   flex-direction: column;
 
-    padding: 20px;
+  padding: 20px;
   /* border: 1px solid black; */
   border-radius: 0px 10px 10px 0px;
 
@@ -48,9 +48,11 @@
   width: 100%;
   height: 100%;
   border-radius: 10px 0px 0px 10px;
-  filter: blur(3px); /* Add this line to blur the image */
+  filter: blur(3px);
+  /* Add this line to blur the image */
 }
-.logo{
+
+.logo {
   width: 3rem;
   /* border: 10px solid green; */
 }
@@ -60,20 +62,21 @@
   src: url("./res/fonts/Museo_Slab_500italic.otf");
 }
 
-.title{
+.title {
   font-family: title;
   margin-top: 10px;
 
 }
-.login_container{
+
+.login_container {
   /* margin-top: 20px; */
   width: 55%;
- /* border: 1px solid black; */
- display: flex;
- flex-direction: column;
- align-items:center;
- justify-content: space-evenly;
- height: 40%; 
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 40%;
 }
 
 .login_container input {
@@ -89,53 +92,240 @@
   /* border: 2px; */
   border-color: #6d95d7;
 }
-input:focus::-webkit-input-placeholder { /* For webkit browsers */
+
+input:focus::-webkit-input-placeholder {
+  /* For webkit browsers */
   color: transparent;
 }
 
-.login_container button{
+.login_container button {
   width: 100%;
   padding: 10px;
-  background-color:#3b71ca;
+  background-color: #3b71ca;
   color: white;
   border: none;
   font-weight: 500;
   border-radius: 5px;
 }
 
-.registration_container{
+.registration_container {
   display: flex;
   flex-direction: column;
   width: 53%;
-}
-.registration_menu{
-  width: 100%;
- /* border: 1px solid black; */
- display: flex;
- align-items:center;
- /* justify-content: center; */
- /* height: 40%;  */
+  /* overflow: scroll; */
+
 }
 
-.backArrow{
+.registration_menu {
+  width: 100%;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  /* height: 40%;  */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.backArrow {
   padding: 5px 10px;
   font-size: 25px;
   cursor: pointer;
+  /* border: 1px solid black; */
+  background-color: #f7f7f7;
+  /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); */
   /* font-weight: 800; */
- /* width: 10%; */
- /* border: 1px solid red; */
+  /* width: 10%; */
+  /* border: 1px solid red; */
 
 }
 
-.registration_menu button{
+.registration_menu button {
   width: 48%;
   padding: 5px 10px;
   font-size: 28px;
-   background-color: transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  background-color: #f7f7f7;
+  color: #767c80;
+
 }
 
+.Student_container {
+  width: 80%;
+  height: fit-content;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  /* overflow:scroll; */
+  /* justify-content: space-evenly; */
+
+}
+
+.register_button{
+  width: 40vh;
+  padding: 10px;
+  background-color: #228B22		;
+  color: white;
+  border: none;
+  font-weight: 500;
+  border-radius: 5px;
+  align-self: center;
+  margin-top: 40px;
+}
+
+.necessary_details {
+  display: flex;
+  /* border: 1px solid black; */
+  justify-content: space-between;
+}
+
+.necessary_details input {
+  width: 40%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #888;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.necessary_details input:focus {
+  outline: none;
+  /* border: 2px; */
+  border-color: #6d95d7;
+}
+
+.description{
+  width: 100%;
+  height: 80px;
+  font-size: 15px;
+  word-wrap: break-word ;
+  border: 1px solid #888;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.description:focus{
+  outline: none;
+  /* border: 2px; */
+  border-color: #6d95d7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.checkbox-wrapper-6 .tgl {
+  display: none;
+}
+
+.checkbox-wrapper-6 .tgl,
+.checkbox-wrapper-6 .tgl:after,
+.checkbox-wrapper-6 .tgl:before,
+.checkbox-wrapper-6 .tgl *,
+.checkbox-wrapper-6 .tgl *:after,
+.checkbox-wrapper-6 .tgl *:before,
+.checkbox-wrapper-6 .tgl+.tgl-btn {
+  box-sizing: border-box;
+}
+
+.checkbox-wrapper-6 .tgl::-moz-selection,
+.checkbox-wrapper-6 .tgl:after::-moz-selection,
+.checkbox-wrapper-6 .tgl:before::-moz-selection,
+.checkbox-wrapper-6 .tgl *::-moz-selection,
+.checkbox-wrapper-6 .tgl *:after::-moz-selection,
+.checkbox-wrapper-6 .tgl *:before::-moz-selection,
+.checkbox-wrapper-6 .tgl+.tgl-btn::-moz-selection,
+.checkbox-wrapper-6 .tgl::selection,
+.checkbox-wrapper-6 .tgl:after::selection,
+.checkbox-wrapper-6 .tgl:before::selection,
+.checkbox-wrapper-6 .tgl *::selection,
+.checkbox-wrapper-6 .tgl *:after::selection,
+.checkbox-wrapper-6 .tgl *:before::selection,
+.checkbox-wrapper-6 .tgl+.tgl-btn::selection {
+  background: none;
+}
+
+.checkbox-wrapper-6 .tgl+.tgl-btn {
+  outline: 0;
+  display: block;
+  width: 3em;
+  height: 1.5em;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox-wrapper-6 .tgl+.tgl-btn:after,
+.checkbox-wrapper-6 .tgl+.tgl-btn:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+
+.checkbox-wrapper-6 .tgl+.tgl-btn:after {
+  left: 0;
+}
+
+.checkbox-wrapper-6 .tgl+.tgl-btn:before {
+  display: none;
+}
+
+.checkbox-wrapper-6 .tgl:checked+.tgl-btn:after {
+  left: 50%;
+}
+
+.checkbox-wrapper-6 .tgl-light+.tgl-btn {
+  background: #f0f0f0;
+  border-radius: 2em;
+  padding: 2px;
+  transition: all 0.4s ease;
+}
+
+.checkbox-wrapper-6 .tgl-light+.tgl-btn:after {
+  border-radius: 50%;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+
+.checkbox-wrapper-6 .tgl-light:checked+.tgl-btn {
+  background: #32CD32	;
+}
