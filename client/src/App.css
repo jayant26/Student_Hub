@@ -14,9 +14,9 @@
   display: flex;
 
   width: 90%;
-  height: 90vh;
+  height: 95vh;
 
-  margin-top: 5vh;
+  margin-top: 2.5vh;
   border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   /* box-shadow: 10px black; */
@@ -165,47 +165,23 @@ input:focus::-webkit-input-placeholder {
 
 }
 
-.register_button{
-  width: 40vh;
-  padding: 10px;
-  background-color: #228B22		;
-  color: white;
-  border: none;
-  font-weight: 500;
-  border-radius: 5px;
-  align-self: center;
-  margin-top: 40px;
-}
 
-.necessary_details {
-  display: flex;
-  /* border: 1px solid black; */
-  justify-content: space-between;
-}
 
-.necessary_details input {
-  width: 40%;
-  padding: 10px;
-  border-radius: 4px;
-  border: 1px solid #888;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.necessary_details input:focus {
-  outline: none;
-  /* border: 2px; */
-  border-color: #6d95d7;
-}
 
 .description{
-  width: 100%;
+  width: 92%;
   height: 80px;
   font-size: 15px;
   word-wrap: break-word ;
+  padding: 10px;
   border: 1px solid #888;
-  margin-top: 20px;
-  margin-bottom: 20px;
+
+  
+  background-color:#e3ebf7 ;
+  outline: none;
+  color: #54679a;
+  border: none;
+  border-radius: 10px;
 }
 
 .description:focus{
@@ -327,5 +303,71 @@ input:focus::-webkit-input-placeholder {
 }
 
 .checkbox-wrapper-6 .tgl-light:checked+.tgl-btn {
-  background: #32CD32	;
+  background:  #54679a	;
+}
+
+
+
+.student_container {
+
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid green; */
+  width: 90%;
+
+}
+
+
+.registration_input {
+  display: flex;
+
+  background-color:#e3ebf7;
+  font-family: 'Poppins', sans-serif;
+  color: #54679a;
+  font-size: 14px;
+  padding: 7px;
+  
+  border-radius: 10px;
+
+}
+
+
+.registartion_image {
+  margin-right: 20px;
+  width: 40px;
+  height: 40px;
+  align-self: center;
+}
+.registration_input input {
+  outline: none;
+  border: none;
+  background-color:#e3ebf7;
+  width: 300px;
+  
+
+}
+
+#registration_button {
+  margin-top: 20px;
+  align-self: flex-start;
+  width: 22%;
+  padding: 13px;
+  background-color: #54679a;
+  color: white;
+  border-radius: 10px;
+  font-size: 15px;
+  /* margin-left: 45px; */
+}
+
+
+.checker p {
+  margin: 0;
+  padding: 0;
+  color: red;
+  font-size: 12px;
+}
+
+.checker{
+  margin-bottom: 20px;
 }

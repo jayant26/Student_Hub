@@ -29,7 +29,7 @@ export const Home = () => {
                                     <input type='text' placeholder='Password' className='login_input_fields'></input>
                                     <h3 style={{ alignSelf: "flex-end", fontSize: "15px", color: "#617dcc", cursor: "pointer" }}>Forogt password?</h3>
                                     <button type='submit' style={{ cursor: "pointer" }}>SIGN IN</button>
-                                    <h3 style={{ fontSize: "15px", marginTop: "5px", fontWeight: "initial" }}>Not a member?<span style={{ color: "#617dcc", fontWeight: "500", cursor: "pointer" }} onClick={(b) => { setb(true) }}> Register</span></h3>
+                                    <h3 style={{ fontSize: "15px", marginTop: "5px", fontWeight: "initial" }}>Not a member?<span style={{ color: "#617dcc", fontWeight: "500", cursor: "pointer" }} onClick={(b) => { setb(true) }}> Join Us</span></h3>
                                 </div>
 
 
