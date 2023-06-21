@@ -15,15 +15,18 @@ app.use((req, res, next) => {
     next();
   });
 
-mongoose.connect("mongodb+srv://jayantjain2609:07432241242@node-shop-app.ke8idrm.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://jayantjain2609:07432241242@node-shop-app.ke8idrm.mongodb.net/?retryWrites=true&w=majority").then(
+    (response)=>{
+        console.log("Working");
+    }
+).catch(err=>{
+    console.log(err);
+});
 
-const studentRoutes=require('../server/routes/student');
-const alumniRoutes=require('../server/routes/alumni');
-const clubRoutes=require('../server/routes/club');
+const userRoutes=require('../server/routes/user');
 
-app.use('/student',studentRoutes);
-app.use('/alumni',alumniRoutes);
-app.use('/club',clubRoutes);
+
+app.use('/user',userRoutes);
 
 
 
