@@ -449,10 +449,12 @@ input:focus::-webkit-input-placeholder {
 
 
 .navBar_container{
+
   width: 100%;
   display: flex;
   /* border: 1px solid black; */
   justify-content: space-between;
+  box-shadow:  2px 2px #999999;
 }
  .item1{
   
@@ -485,6 +487,84 @@ input:focus::-webkit-input-placeholder {
 }
 
 
+.material-symbols-outlined {
+  cursor: pointer;
+ margin-right: 40px;
+  color:#999999 ;
+  font-size: 40px;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 70
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.mainPage_container {
+  display: flex;
+}
+
+.mainPage_sidebar {
+
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #696969;
+  /* border-bottom: 0px; */
+  border-top: 0px;
+  width: 15%;
+  height: 100vh;
+  align-items: flex-end;
+  font-family: 'Poppins', sans-serif;
+  text-align: left!important;
+}
+
+.mainPage_sidebar h1{
+  margin-top: 0px;
+  font-size: 20px;
+  align-self: center;
+  margin-bottom: 0px;
+}
+
+.mainPage_sidebar .item1 {
+  cursor: pointer;
+  width: 55%;
+  /* background-color: #005642; */
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  padding-left: 50px;
+  /* color: white; */
+}
 
 
 
+
+
+.eleven h1 {
+  font-size:30px;text-align:center; line-height:1.5em;  font-family:"Playfair Display", serif; text-transform:uppercase;letter-spacing: 2px; color:#111;
+}
+
+
+.eleven h1:before {
+  position: absolute;
+  left: 10%;
+  top:20%;
+  /* bottom: 20px; */
+  width: 20%;
+  left:75.5%; margin-left:-29%;
+  height: 1px;
+  content: "";
+  background-color: #777; 
+}
+.eleven h1:after {
+  position:relative;
+  width:40px; height:40px; left:50%; margin-left:-20px; bottom:0px;
+  content: '\00a7'; font-size:30px; line-height:40px; color:#c50000;
+  font-weight:400; z-index: 5;
+  display:block;
+  background-color:white;
+}

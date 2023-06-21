@@ -3,6 +3,7 @@ const morgan=require('morgan');
 const mongoose=require('mongoose');
 const cors =require('cors');
 // const router = express.Router();
+const dotenv=require('dotenv');
 const app=express();
 app.use(cors());
 app.use(morgan('dev'));
@@ -14,8 +15,9 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
     next();
   });
+dotenv.config();
 
-mongoose.connect("mongodb+srv://jayantjain2609:07432241242@node-shop-app.ke8idrm.mongodb.net/?retryWrites=true&w=majority").then(
+mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@node-shop-app.ke8idrm.mongodb.net/?retryWrites=true&w=majority`).then(
     (response)=>{
         console.log("Working");
     }

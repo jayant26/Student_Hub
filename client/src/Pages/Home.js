@@ -7,7 +7,7 @@ import { Student_registration } from '../Components/Student_registration';
 import { json, useNavigate } from 'react-router-dom';
 //import "bootstrap/dist/css/bootstrap.css";
 //import { Registration } from '../Components/Registration';
-export const Home = () => {
+export const Home = ({isuserAuth}) => {
     const navigate=useNavigate();
     const [b, setb] = useState(false);
     const [y, sety] = useState(true);
@@ -23,8 +23,11 @@ export const Home = () => {
         Axios.post('http://localhost:3001/user/login',data).then((response)=>{
            
                 console.log(response.data.token);
-                localStorage.setItem("jwttoken",response.data.token);
-                navigate('/home',{state:{_id:response.data._id}});
+                sessionStorage.setItem('accesstoken',`Bearer ${response.data.accesstoken}`);
+                sessionStorage.setItem("refreshtoken",`Bearer ${response.data.refreshtoken}`);
+                isuserAuth(true);
+                navigate('/',{state:{_id:response.data._id}});
+
             
             }).catch(error=>{
             if(error.response&&error.response.status==401)

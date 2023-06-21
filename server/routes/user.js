@@ -6,7 +6,11 @@ const multer = require('multer');
 const upload = multer();
 const bcrypt = require('bcrypt');
 const jwt=require('jsonwebtoken');
+const dotenv=require('dotenv');
+const Token=require('../models/token');
+const { token } = require('morgan');
 
+dotenv.config()
 router.post('/login',(req,res,next)=>{
     User.find({$or:[{username:req.body.cred},{email:req.body.cred}]}).exec()
     .then((user)=>{
@@ -26,18 +30,31 @@ router.post('/login',(req,res,next)=>{
             }
             else{
               if(result){
-                const token=jwt.sign({
+                const accesstoken=jwt.sign({
                   username:user[0].username,
                   email:user[0].email,
                   _id:user[0]._id
-                },"akirgahsuhk",
+                },process.env.SECRET_KEY1,
                 {
                   expiresIn:"1h"
                 }
+                
                 )
+                const refreshtoken=jwt.sign({
+                  username:user[0].username,
+                  email:user[0].email,
+                  _id:user[0]._id
+                },process.env.SECRET_KEY2,
+                )
+
+                const token=new Token({
+                  token:accesstoken
+                })
+                token.save();
                 return res.status(200).json({
                   message:"Successfully logged in",
-                  token:token,
+                  Atoken:accesstoken,
+                  Rtoken:refreshtoken,
                   _id:user[0]._id
                 })
               }
