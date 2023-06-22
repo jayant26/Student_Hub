@@ -17,6 +17,7 @@ const Main_page = () => {
       AlumniList: false,
       ClubList: false
   });
+  const user_id=location.state._id;
   const handleClick = (field) => {
     const updatedMenu = Object.keys(showMenu).reduce((acc, item) => {
         acc[item] = item === field;
@@ -28,7 +29,7 @@ const Main_page = () => {
 
   return (
       <div>
-        <NavBar/>
+        <NavBar user_id={user_id}/>
         <div className='mainPage_container'>
         <div className='mainPage_sidebar'>
                     

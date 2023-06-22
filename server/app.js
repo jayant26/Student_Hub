@@ -26,10 +26,11 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASS
 });
 
 const userRoutes=require('../server/routes/user');
-
-
+const imageRoutes=require('../server/routes/image');
+const postRoutes=require('../server/routes/post');
 app.use('/user',userRoutes);
-
+app.use('/file',imageRoutes);
+app.use('/post',postRoutes);
 
 
 app.use((req, res, next) => {

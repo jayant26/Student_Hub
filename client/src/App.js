@@ -4,7 +4,7 @@ import { Home } from './Pages/Home';
 import Main_page from './Pages/Main_page';
 import { BrowserRouter as Router, Route, Redirect ,Routes, Navigate, Outlet} from "react-router-dom";
 import { useState } from 'react';
-import Createpost from './Components/Create/Createpost';
+import Createpost from './Components/Createpost';
 
 const PrivateRoute =({isAuth})=>{
 

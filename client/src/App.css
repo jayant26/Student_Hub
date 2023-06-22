@@ -80,7 +80,7 @@
   /* border: 1px solid black; */
 }
 
-.login_container p{
+.login_container p {
   align-self: flex-start;
   margin: 0;
   padding: 0;
@@ -180,23 +180,23 @@ input:focus::-webkit-input-placeholder {
 
 
 
-.description{
+.description {
   width: 92%;
   height: 80px;
   font-size: 15px;
-  word-wrap: break-word ;
+  word-wrap: break-word;
   padding: 10px;
   border: 1px solid #888;
 
-  
-  background-color:#e3ebf7 ;
+
+  background-color: #e3ebf7;
   outline: none;
   color: #54679a;
   border: none;
   border-radius: 10px;
 }
 
-.description:focus{
+.description:focus {
   outline: none;
   /* border: 2px; */
   border-color: #6d95d7;
@@ -315,7 +315,7 @@ input:focus::-webkit-input-placeholder {
 }
 
 .checkbox-wrapper-6 .tgl-light:checked+.tgl-btn {
-  background:  #54679a	;
+  background: #54679a;
 }
 
 
@@ -334,12 +334,12 @@ input:focus::-webkit-input-placeholder {
 .registration_input {
   display: flex;
 
-  background-color:#e3ebf7;
+  background-color: #e3ebf7;
   font-family: 'Poppins', sans-serif;
   color: #54679a;
   font-size: 14px;
   padding: 7px;
-  
+
   border-radius: 10px;
 
 }
@@ -351,12 +351,13 @@ input:focus::-webkit-input-placeholder {
   height: 40px;
   align-self: center;
 }
+
 .registration_input input {
   outline: none;
   border: none;
-  background-color:#e3ebf7;
+  background-color: #e3ebf7;
   width: 300px;
-  
+
 
 }
 
@@ -380,7 +381,7 @@ input:focus::-webkit-input-placeholder {
   font-size: 12px;
 }
 
-.checker{
+.checker {
   margin-bottom: 20px;
 }
 
@@ -427,7 +428,7 @@ input:focus::-webkit-input-placeholder {
 }
 
 #big-box {
- 
+
   height: 100%;
   display: flex;
   align-items: center;
@@ -448,36 +449,39 @@ input:focus::-webkit-input-placeholder {
 }
 
 
-.navBar_container{
+.navBar_container {
 
   width: 100%;
   display: flex;
   /* border: 1px solid black; */
   justify-content: space-between;
-  box-shadow:  2px 2px #999999;
+  box-shadow: 2px 2px #999999;
 }
- .item1{
-  
+
+.item1 {
+
   align-self: flex-start;
   display: flex;
 
 }
-.item1 img{
+
+.item1 img {
   width: 60px;
   height: 60px;
 
 }
-.item2{
- 
+
+.item2 {
+
   display: flex;
   align-self: flex-end;
   /* background-color: gray; */
   height: 60px;
   align-items: center;
-  
+
 }
 
-.item2 div{
+.item2 div {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 20px;
   color: #999999;
@@ -489,14 +493,14 @@ input:focus::-webkit-input-placeholder {
 
 .material-symbols-outlined {
   cursor: pointer;
- margin-right: 40px;
-  color:#999999 ;
+  margin-right: 40px;
+  color: #999999;
   font-size: 40px;
   font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 70
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 70
 }
 
 ::-webkit-scrollbar {
@@ -519,10 +523,10 @@ input:focus::-webkit-input-placeholder {
   height: 100vh;
   align-items: flex-end;
   font-family: 'Poppins', sans-serif;
-  text-align: left!important;
+  text-align: left !important;
 }
 
-.mainPage_sidebar h1{
+.mainPage_sidebar h1 {
   margin-top: 0px;
   font-size: 20px;
   align-self: center;
@@ -545,26 +549,60 @@ input:focus::-webkit-input-placeholder {
 
 
 .eleven h1 {
-  font-size:30px;text-align:center; line-height:1.5em;  font-family:"Playfair Display", serif; text-transform:uppercase;letter-spacing: 2px; color:#111;
+  font-size: 30px;
+  text-align: center;
+  line-height: 1.5em;
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #111;
 }
 
 
 .eleven h1:before {
   position: absolute;
   left: 10%;
-  top:20%;
+  top: 20%;
   /* bottom: 20px; */
   width: 20%;
-  left:75.5%; margin-left:-29%;
+  left: 75.5%;
+  margin-left: -29%;
   height: 1px;
   content: "";
-  background-color: #777; 
+  background-color: #777;
 }
+
 .eleven h1:after {
-  position:relative;
-  width:40px; height:40px; left:50%; margin-left:-20px; bottom:0px;
-  content: '\00a7'; font-size:30px; line-height:40px; color:#c50000;
-  font-weight:400; z-index: 5;
-  display:block;
-  background-color:white;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  margin-left: -20px;
+  bottom: 0px;
+  content: '\00a7';
+  font-size: 30px;
+  line-height: 40px;
+  color: #c50000;
+  font-weight: 400;
+  z-index: 5;
+  display: block;
+  background-color: white;
+}
+
+
+.create_button{
+  padding: 5px 10px;
+  width:82px;
+  color:white;
+  background-color: #3b71ca;
+  border:none;
+  font-family: 'Poppins';
+}
+.create_detail {
+  width: 100%;
+  margin-top: 50px;
+  font-size: 18px;
+  color: #999999;
+  border: none;
+  outline: none;
 }

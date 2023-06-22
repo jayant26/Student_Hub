@@ -2,16 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import logo from '../res/logo.jpg';
 
-const NavBar = () => {
+const NavBar = (props) => {
   const navigate = useNavigate();
   const location = useLocation();
-
+  
   const handleLogout = () => {
+    sessionStorage.removeItem('accesstoken');
+    sessionStorage.removeItem('refreshtoken');
     navigate('/login');
   };
 
   const handleCreate = () => {
-    navigate('/create');
+    navigate('/create',{state:{user_id:props.user_id}});
   };
 
   const handleHome = () => {

@@ -8,7 +8,7 @@ const bcrypt = require('bcrypt');
 const jwt=require('jsonwebtoken');
 const dotenv=require('dotenv');
 const Token=require('../models/token');
-const { token } = require('morgan');
+
 
 dotenv.config()
 router.post('/login',(req,res,next)=>{
@@ -55,7 +55,9 @@ router.post('/login',(req,res,next)=>{
                   message:"Successfully logged in",
                   Atoken:accesstoken,
                   Rtoken:refreshtoken,
-                  _id:user[0]._id
+                  _id:user[0]._id,
+                  
+
                 })
               }
               return res.status(401).json({
@@ -74,54 +76,6 @@ router.post('/login',(req,res,next)=>{
 
 
 
-
-// User.find({email:req.body.cred})
-    // .exec()
-    // .then(user=>{
-    //   if(user.length<1)
-    //   {
-    //     return  res.status(401).json({
-    //       message:"Invalid username or password"
-    //     })
-    //   }
-    //   else{
-    //     User.find({username:req.body.cred}).exec.then((result)=>{
-    //       if(result.length<1)
-    //     })
-    //     // bcrypt.compare(req.body.password,user[0].password,(err,result)=>{
-    //     //   if(err)
-    //     //   {
-    //     //     return res.status(401).json({
-    //     //       message:"Inavlid Username or password"
-    //     //     })
-    //     //   }
-    //     //   else{
-    //     //     if(result){
-    //     //       const token=jwt.sign({
-    //     //         email:user[0].email,
-    //     //         _id:user[0]._id
-    //     //       },"akirgahsuhk",
-    //     //       {
-    //     //         expiresIn:"1h"
-    //     //       }
-    //     //       )
-    //     //       return res.status(200).json({
-    //     //         message:"Successfully logged in",
-    //     //         token:token
-    //     //       })
-    //     //     }
-    //     //     return res.status(401).json({
-    //     //       message:"Invalid username and password"
-    //     //     })
-    //     //   }
-    //     // })
-    //   }
-
-    // }).catch(err=>{
-    //   res.status(500).json({
-    //     error:err
-    //   })
-    // })
 
 router.post('/register', upload.none(), (req, res, next) => {
     console.log(req.body);
@@ -213,25 +167,7 @@ router.post('/register', upload.none(), (req, res, next) => {
 
 
 
-    // const user =new User({
-    
-    // })
 
-    // student.save()
-    // .exec()
-    // .then(result=>{
-    //     console.log('result',result);
-    //     res.status(201).json({
-    //         message:"Student Resgistered successfully"
-    //     })
-
-    // })
-    // .catch(err=>{
-    //     console.log('error',err);
-    //     res.status(500).json({error:err})
-    // })
-//      res.status(200).json({message:"recieved registration details"});
-// })
 
 router.post('/register/check',(req,res,next)=>{
    console.log(req.body.email);
@@ -256,6 +192,20 @@ router.post('/register/check',(req,res,next)=>{
     res.status(500).json({error:error.message})
    })
 
+})
+
+
+router.get('/:user_id',(req,res,next)=>{
+    const _id=req.params.user_id;
+    console.log(_id);
+    User.findById(_id).select('username isalumni isclub').exec()
+    .then((result)=>{
+        console.log(result);
+        res.status(200).json(result);
+    })
+    .catch((err)=>{
+      res.status(500).json({error:err})
+    })
 })
 
 

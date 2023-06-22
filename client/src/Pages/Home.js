@@ -22,9 +22,9 @@ export const Home = ({isuserAuth}) => {
     const onSubmit=(data)=>{
         Axios.post('http://localhost:3001/user/login',data).then((response)=>{
            
-                console.log(response.data.token);
-                sessionStorage.setItem('accesstoken',`Bearer ${response.data.accesstoken}`);
-                sessionStorage.setItem("refreshtoken",`Bearer ${response.data.refreshtoken}`);
+              
+                sessionStorage.setItem('accesstoken',`Bearer ${response.data.Atoken}`);
+                sessionStorage.setItem("refreshtoken",`Bearer ${response.data.Rtoken}`);
                 isuserAuth(true);
                 navigate('/',{state:{_id:response.data._id}});
 
