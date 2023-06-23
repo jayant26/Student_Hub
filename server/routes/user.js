@@ -56,7 +56,7 @@ router.post('/login',(req,res,next)=>{
                   Atoken:accesstoken,
                   Rtoken:refreshtoken,
                   _id:user[0]._id,
-                  
+                  username:user[0].username
 
                 })
               }

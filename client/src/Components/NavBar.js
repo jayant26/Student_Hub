@@ -13,7 +13,7 @@ const NavBar = (props) => {
   };
 
   const handleCreate = () => {
-    navigate('/create',{state:{user_id:props.user_id}});
+    navigate('/create');
   };
 
   const handleHome = () => {

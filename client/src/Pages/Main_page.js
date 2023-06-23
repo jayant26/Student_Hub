@@ -6,7 +6,7 @@ import NavBar from '../Components/NavBar';
 import List from '../Components/List';
 import Post from '../Components/Post';
 const Main_page = () => {
-    const location=useLocation();
+    // const location=useLocation();
     const [showMenu, setMenu] = useState({
       Allpost: true,
       Alumni: false,
@@ -17,7 +17,7 @@ const Main_page = () => {
       AlumniList: false,
       ClubList: false
   });
-  const user_id=location.state._id;
+//   const user_id=location.state._id;
   const handleClick = (field) => {
     const updatedMenu = Object.keys(showMenu).reduce((acc, item) => {
         acc[item] = item === field;
@@ -29,7 +29,7 @@ const Main_page = () => {
 
   return (
       <div>
-        <NavBar user_id={user_id}/>
+        <NavBar />
         <div className='mainPage_container'>
         <div className='mainPage_sidebar'>
                     
@@ -61,11 +61,11 @@ const Main_page = () => {
                     </div>
                 </div>
           <div className='mainPage_content' style={{ width: "100%" }}>
-                    {showMenu.Allpost && <Post  title={'All Post'}/>}
-                    {showMenu.Alumni && <Post  title={'Alumni Post'}/>}
-                    {showMenu.Club && <Post  title={'Club Post'}/>}
-                    {showMenu.Student && <Post  title={'Student Post'}/>}
-                    {showMenu.Mypost && <Post  title={'My Post'}/>}
+                    {showMenu.Allpost && <Post  title={'All Post'}  category={'All'} />}
+                    {showMenu.Alumni && <Post  title={'Alumni Post'} category={'Alumni'} />}
+                    {showMenu.Club && <Post  title={'Club Post'} category={'Club'}/>}
+                    {showMenu.Student && <Post  title={'Student Post'} category={'Student'} />}
+                    {showMenu.Mypost && <Post  title={'My Post'} category={'My'} />}
                     {showMenu.AlumniList && <List  title={'Alumni List'}/>}
                     {showMenu.ClubList && <List  title={'Club List'}/>}
                     {showMenu.StudentList && <List  title={'Student List'}/>}

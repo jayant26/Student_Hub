@@ -5,6 +5,8 @@ import Main_page from './Pages/Main_page';
 import { BrowserRouter as Router, Route, Redirect ,Routes, Navigate, Outlet} from "react-router-dom";
 import { useState } from 'react';
 import Createpost from './Components/Createpost';
+import ViewPost from './Components/ViewPost';
+import UpdatePost from './Components/UpdatePost';
 
 const PrivateRoute =({isAuth})=>{
 
@@ -25,6 +27,12 @@ function App() {
           </Route>
           <Route path='/create' element={<PrivateRoute isAuth={isAuth}/>}>
           <Route path='/create' element={<Createpost/>}/>
+          </Route>
+          <Route path='/post/:id' element={<PrivateRoute isAuth={isAuth}/>}>
+          <Route path='/post/:id' element={<ViewPost/>}/>
+          </Route>
+          <Route path='/update/:id' element={<PrivateRoute isAuth={isAuth}/>}>
+          <Route path='/update/:id' element={<UpdatePost/>}/>
           </Route>
         </Routes>
       </Router>

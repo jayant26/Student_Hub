@@ -25,8 +25,11 @@ export const Home = ({isuserAuth}) => {
               
                 sessionStorage.setItem('accesstoken',`Bearer ${response.data.Atoken}`);
                 sessionStorage.setItem("refreshtoken",`Bearer ${response.data.Rtoken}`);
+                sessionStorage.setItem("_id",`${response.data._id}`);
+                sessionStorage.setItem("username",`${response.data.username}`);
+
                 isuserAuth(true);
-                navigate('/',{state:{_id:response.data._id}});
+                navigate('/');
 
             
             }).catch(error=>{
@@ -36,7 +39,7 @@ export const Home = ({isuserAuth}) => {
             }
         })
     }
-    // + encodeURIComponent(JSON.stringify(response.data._id))
+ 
     return (
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
             <div className="Homepage_main_container">

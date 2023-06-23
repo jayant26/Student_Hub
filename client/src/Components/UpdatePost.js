@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import NavBar from './NavBar'
 import blan from '../res/blank.jpg'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import axios  from 'axios'
 import Axios from "axios";
 const initial_post={
@@ -13,14 +13,16 @@ const initial_post={
   isClub:'',
   createdDate:new Date()
 }
-const Createpost = () => {
+const UpdatePost = () => {
   const navigate=useNavigate();
   // const location =useLocation();
+  const id=useParams();
+  console.log(id.id);
   const user_id=sessionStorage.getItem('_id');
   const [post,setpost]=useState(initial_post);
   const [file,setfile]=useState('');
   const [image,setimage]=useState(blan);
-  console.log(user_id);
+//   console.log(user_id);
   useEffect(()=>{
     axios.get(`http://localhost:3001/user/${user_id}`)
     .then((response)=>{
@@ -30,6 +32,17 @@ const Createpost = () => {
       post.isClub=response.data.isclub;
     })
   },[])
+
+  useEffect(() => {
+    axios.get(`http://localhost:3001/post/${id.id}`).then((response) => {
+        if (response.data.image) {
+            setimage(response.data.image);
+        }
+        setpost(response.data);
+    });
+}, []);
+
+
 
   useEffect(() => {
     const getimage = async () => {
@@ -64,8 +77,8 @@ const Createpost = () => {
   }
   const handlepost=()=>{
     console.log(post);
-    Axios.post('http://localhost:3001/post/create',post,config).then((response)=>{
-      navigate('/');
+    Axios.patch(`http://localhost:3001/post/update/${id.id}`,post,config).then((response)=>{
+      navigate(`/post/${id.id}`);
     })
   }
 
@@ -83,13 +96,13 @@ const Createpost = () => {
             </span>
           </label>
           <input type='file' id="post_image" style={{ display: "none" }} onChange={(e)=>setfile(e.target.files[0])} />
-          <input type='text' placeholder='Title' style={{ flex: 1, fontSize: "25px", outline: "none", border: "none"}} name="title" onChange={(e)=>{handlechange(e)}} />
-          <button className='create_button' onClick={handlepost}>Post</button>
+          <input type='text' placeholder='Title' value={post.title} style={{ flex: 1, fontSize: "25px", outline: "none", border: "none"}} name="title" onChange={(e)=>{handlechange(e)}} />
+          <button className='create_button' onClick={handlepost}>Update</button>
         </div>
-        <textarea className='create_detail' placeholder='Write what you want to share...' rows={5} name="detail" onChange={(e)=>{handlechange(e)}}></textarea>
+        <textarea className='create_detail' value={post.detail} placeholder='Write what you want to share...' rows={5} name="detail" onChange={(e)=>{handlechange(e)}}></textarea>
       </div>
     </>
   )
 }
 
-export default Createpost
+export default UpdatePost

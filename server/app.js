@@ -28,9 +28,11 @@ mongoose.connect(`mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASS
 const userRoutes=require('../server/routes/user');
 const imageRoutes=require('../server/routes/image');
 const postRoutes=require('../server/routes/post');
+const commentRoutes=require('../server/routes/comment');
 app.use('/user',userRoutes);
 app.use('/file',imageRoutes);
 app.use('/post',postRoutes);
+app.use('/comment',commentRoutes);
 
 
 app.use((req, res, next) => {

@@ -520,7 +520,7 @@ input:focus::-webkit-input-placeholder {
   /* border-bottom: 0px; */
   border-top: 0px;
   width: 15%;
-  height: 100vh;
+  height: 91.5vh;
   align-items: flex-end;
   font-family: 'Poppins', sans-serif;
   text-align: left !important;
@@ -605,4 +605,121 @@ input:focus::-webkit-input-placeholder {
   color: #999999;
   border: none;
   outline: none;
+}
+
+.post_container {
+  cursor: pointer;
+  width: 22%;
+  height: 350px;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 2px 0px 10px 2px black;
+  margin-left: 20px;
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Add this line */
+}
+.post_container img {
+  width: 100%;
+  object-fit: cover;
+  height: 150px;
+}
+
+.post_container {
+  padding: 0px 5px 5px 5px;
+}
+
+.categories {
+  border: 1px solid black;
+  color: white;
+  width: 30%;
+  font-size: 15px;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.post_title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.post_detail {
+  font-size: 14px;
+  word-break: break-word;
+  margin-top: 5px;
+}
+
+
+.post_info {
+  position: absolute; /* Add this line */
+  bottom: 5px; /* Add this line */
+  left: 0; /* Add this line */
+  width: 100%; /* Add this line */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 10px;
+}
+
+.username {
+  font-weight: bold;
+  align-self: center;
+  color: #878787;
+}
+
+.formatted_time {
+  align-self: center;
+  color: #878787;
+}
+
+.vp_title{
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  margin: 50px 0 10px 0;
+  word-break: break-word;
+}
+
+
+.spinner {
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #333333;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.update_button span{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 25px;
+    border: 1px solid;
+
+}
+
+.comment_dp{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.comment_detail{
+  height: 100px;
+  width: 100%;
+  margin: 0px 20px;
 }
