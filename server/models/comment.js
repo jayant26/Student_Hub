@@ -2,22 +2,21 @@ const mongoose=require('mongoose');
 
 
 const commentSchema=mongoose.Schema({
-    username: {
+    name: {
         type: String,
         required: true,
-        unique: true
     },
-    comments: {
-        type: String,
-        required: true
-    },
-    postid:{
+    postid: {
         type: String,
         required: true
     },
     date: {
-        type: Date,
-        required:true
+        type: String,
+        required: true
+    },
+    comments: {
+        type: String,
+        required: true
     }
 })
 

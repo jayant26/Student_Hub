@@ -7,6 +7,7 @@ import { useState } from 'react';
 import Createpost from './Components/Createpost';
 import ViewPost from './Components/ViewPost';
 import UpdatePost from './Components/UpdatePost';
+import Profile from './Components/Profile';
 
 const PrivateRoute =({isAuth})=>{
 
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route path='/update/:id' element={<PrivateRoute isAuth={isAuth}/>}>
           <Route path='/update/:id' element={<UpdatePost/>}/>
+          </Route>
+          <Route path='/profile/:id' element={<PrivateRoute isAuth={isAuth}/>}>
+          <Route path='/profile/:id' element={<Profile/>}/>
           </Route>
         </Routes>
       </Router>

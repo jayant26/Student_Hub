@@ -20,8 +20,11 @@ const NavBar = (props) => {
     navigate('/');
   };
 
+  const handleprofie=()=>{
+    navigate(`/profile/${sessionStorage.getItem('username')}`)
+  }
   const [isCreate, setisCreate] = useState(true);
-
+  const [isprofile,setisprofile]=useState(true);
   useEffect(() => {
     // Check if the current location matches the '/create' route
     if (location.pathname === '/create') {
@@ -30,6 +33,13 @@ const NavBar = (props) => {
     } else {
       // Show the 'add_circle' icon
       setisCreate(true);
+    }
+    if (location.pathname === `/profile/${sessionStorage.getItem('username')}`) {
+      // Hide the 'add_circle' icon
+      setisprofile(false);
+    } else {
+      // Show the 'add_circle' icon
+      setisprofile(true);
     }
   }, [location.pathname]);
 
@@ -48,7 +58,7 @@ const NavBar = (props) => {
             add_circle
           </span>
         )}
-        <span className='material-symbols-outlined'>account_circle</span>
+        {isprofile&&(<span className='material-symbols-outlined' onClick={handleprofie}>account_circle</span>)}
         <div onClick={handleLogout}>Logout</div>
       </div>
     </div>

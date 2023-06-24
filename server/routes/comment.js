@@ -9,6 +9,7 @@ router.post('/add',(req,res,next)=>{
     comment.save().then(()=>{
         res.status(200).json({message:"recieved comment"});
     }).catch(err=>{
+        console.log(err);
         res.status(500).json({error:err})
     })
     
@@ -24,6 +25,16 @@ router.get('/getall/:id',(req,res,next)=>{
     })
 
 
+})
+
+
+router.delete('/delete/:id',(req,res,next)=>{
+    const id=req.params.id;
+    Comment.findByIdAndDelete(id).exec().then(result=>{
+        res.status(200).json({message:"deleted successfulyy"});
+    }).catch(err=>{
+        res.status(500).json({error:err});
+    })
 })
 
 
